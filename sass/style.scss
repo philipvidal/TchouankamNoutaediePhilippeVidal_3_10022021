@@ -91,3 +91,62 @@ body
     }
     
 }
+.restaurants
+{
+    background-color: #f2f2f2;
+    padding-left: 15px;
+    .restaurants__contener
+    {
+        
+        background-color: #fff;
+        max-width: 95%;
+        border-radius: 15px;
+    }
+    .restaurants__image1
+    {
+        background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+        border-top-left-radius: 15px ;
+        border-top-right-radius: 15px ;
+        background-position: center;
+        background-size: 100%;
+        max-width: 100%;
+        height: 215px;
+        & p 
+        {
+            background-color: $tertaire;
+            width: 25%;
+            padding: 5px 0px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: 15px;
+            position: relative;
+            top: 15px;
+        }
+    }
+    .restaurants__description
+    {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+        margin: auto;
+    }
+    .restaurants__image2
+    {
+        background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
+        @extend .restaurants__image1;
+    }
+    .restaurants__image3
+    {
+        background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+        @extend .restaurants__image1;
+    }
+    .restaurants__image4
+    {
+        background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+        @extend .restaurants__image1
+    }
+}
+.text--bold
+{
+    font-weight: bold;
+}
