@@ -1,5 +1,77 @@
 body {
-  background-color: aqua;
+  background-color: white;
+  font-family: Roboto, sans-serif, Shrikhand;
+  margin: 0;
+}
+
+.presentation {
+  background-color: #f2f2f2;
+}
+.presentation .presentation--localisation {
+  display: flex;
+  background-color: #e5e5e5;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+}
+.presentation .presentation--localisation .presentation--form {
+  border: none;
+  background-color: #e5e5e5;
+}
+.presentation h2 {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+.presentation p {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.presentation .presentation__btn {
+  padding: 10px 10px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background-color: #C968DB;
+  border-radius: 20px;
+}
+.presentation .presentation__btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__logo {
+  width: 40%;
+  display: block;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.fonctionnement {
+  margin-left: 15px;
+}
+.fonctionnement .fonctionnement__contener {
+  display: flex;
+  font-weight: bold;
+  max-width: 90%;
+  border-radius: 15px;
+  margin-left: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 6px rgba(68, 35, 35, 0.3);
+}
+.fonctionnement .fonctionnement__contener .fonctionnement__numero {
+  background-color: #9356DC;
+  padding: 1px 6px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: normal;
+  position: relative;
+  right: 10px;
+  margin-right: 15px;
+}
+.fonctionnement .fonctionnement__contener .fonctionnement__icone {
+  color: #999999;
+  margin-right: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
