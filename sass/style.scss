@@ -10,6 +10,39 @@ $tertaire: #99E2D0;
         @media screen and(min-width: 1000px) { @content }
     }
 }
+@keyframes progress-bar{
+    0% {
+        transform: scaleX(0);
+        
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes progress-bar4{
+    0% {
+        transform: rotate(0);
+        
+    }
+    50%{
+        transform: rotate(1turn);
+    }
+    
+    100% {
+        transform: rotate(2turn);
+    }
+}
+
 
 body
 {
@@ -34,6 +67,7 @@ body
     }
     
 }
+
 .presentation
 {
     background-color: #f2f2f2;
@@ -90,6 +124,7 @@ body
     i 
     {
         margin-left: 40px;
+        color: rgb(77, 75, 75);
     }
     @include breakpoint(desktop){
     background-color: #f2f2f2;
@@ -102,7 +137,7 @@ body
     
     .ohmyfood__header__logo
 {
-    width: 40%;
+    width: 60%;
     display: block;
     margin: auto;
     padding-top: 15px;
@@ -283,3 +318,147 @@ footer
 {
     padding-right: 15px;
 }
+
+.menu1 {
+    background-color: #f2f2f2;
+    padding-left: 15px;
+    margin-top: -50px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    .menu__title
+    {
+    display: flex;
+    justify-content: space-between;
+        i 
+        {
+            font-size: x-large;
+            color: #807e7e;
+            margin-left: -50px;
+        }
+    }
+    .menu__contener{
+    display: flex;
+    align-items: center;
+    width: 94%;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 10px;
+    &:hover
+    {
+        & .menu__contener__ani
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scalex(1);
+            animation: progress-bar 1000 1150ms;
+            
+
+        }
+        & i 
+        {
+            animation: progress-bar4 800ms;
+        }
+        
+    }
+    .menu__contener__ani
+    {
+        min-width: 20%;
+        background: #99E2D0;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        transform-origin: right;
+        transform: scalex(0);
+        transition: transform 1000ms ease-in-out;
+        display: none;
+        i 
+        {
+            transition: transform 0s ease-in-out;
+            transform: rotate(0);
+
+        }
+
+    }
+    @include breakpoint(desktop)
+    {
+        width: 23%;
+    }
+    }
+    .menu__contener__visible
+    {
+        
+        width: 100%;
+        margin: auto;
+        padding-right: 15px;
+        
+        @include breakpoint(desktop)
+        {
+        }
+        
+    }
+    h2 
+    {
+        font-family: Shrikhand;
+    }
+    .menu__border
+    {
+        width: 12%;
+        border-top: 3px $tertaire solid;
+        margin-top: -5px;
+    }
+    .menu__price 
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -25px;
+        
+        
+        
+    }
+    .commande__btn
+    {
+        padding: 10px 10px;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        background-image: linear-gradient(to top, $primaire, $secondaire);
+        border-radius: 20px;
+        overflow: hidden;
+        & a 
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+    }
+    .menu__all
+    {
+        @include breakpoint(desktop)
+        {
+            
+        }
+    }
+    
+    
+
+}
+
+.menu__image
+{
+    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: 100%;
+    max-width: 100%;
+    height: 240px;
+    @include breakpoint(desktop){
+        height: 450px;
+        background-position: center;
+    }
+
+}
+
+
+
