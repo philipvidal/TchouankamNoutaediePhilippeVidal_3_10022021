@@ -2,15 +2,6 @@
   0% {
     transform: scaleX(0);
   }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
   100% {
     transform: scaleX(1);
   }
@@ -172,6 +163,10 @@ body {
   background-color: #f2f2f2;
   padding-left: 15px;
 }
+.restaurants a {
+  text-decoration: none;
+  color: black;
+}
 .restaurants .restaurants__contener {
   background-color: #fff;
   max-width: 95%;
@@ -251,6 +246,10 @@ footer h3 {
 footer p {
   color: #ccc9c9;
 }
+footer a {
+  text-decoration: none;
+  color: #ccc9c9;
+}
 @media screen and (min-width: 1000px) {
   footer {
     display: flex;
@@ -293,10 +292,14 @@ footer p {
   justify-content: center;
   align-items: center;
   transform: scalex(1);
-  animation: progress-bar 1000 1150ms;
+  animation: progress-bar 1000ms backwards;
+  animation-timing-function: cubic-bezier(0.11, -0.2, 0.04, 1.01);
 }
 .menu1 .menu__contener:hover i {
   animation: progress-bar4 800ms;
+}
+.menu1 .menu__contener:hover .price {
+  transform: translateX(0);
 }
 .menu1 .menu__contener .menu__contener__ani {
   min-width: 20%;
@@ -309,7 +312,7 @@ footer p {
   border-top-right-radius: 15px;
   transform-origin: right;
   transform: scalex(0);
-  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms;
   display: none;
 }
 .menu1 .menu__contener .menu__contener__ani i {
@@ -334,23 +337,28 @@ footer p {
   border-top: 3px #99E2D0 solid;
   margin-top: -5px;
 }
-.menu1 .menu__price {
+.menu1 .menu__description {
   display: flex;
   justify-content: space-between;
   margin-top: -25px;
+  transition: display 5s;
 }
 .menu1 .commande__btn {
-  padding: 10px 10px;
+  padding: 12px 10px;
   text-align: center;
-  width: 50%;
+  width: 40%;
   margin: auto;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 2px 8px #a3a2a2;
   border-radius: 20px;
   overflow: hidden;
 }
 .menu1 .commande__btn a {
   text-decoration: none;
   color: #fff;
+}
+.menu1 .commande__btn:hover {
+  background-image: linear-gradient(to top, #a16be0, #FF79DA);
 }
 .menu__image {
   background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);

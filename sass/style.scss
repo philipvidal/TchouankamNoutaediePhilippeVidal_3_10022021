@@ -13,17 +13,7 @@ $tertaire: #99E2D0;
 @keyframes progress-bar{
     0% {
         transform: scaleX(0);
-        
-    }
-    17% {
-        transform: scaleX(.18);
-    }
-    24% {
-        transform: scaleX(.4);
-    }
-    46% {
-        transform: scaleX(.81);
-    }
+        }
     100% {
         transform: scaleX(1);
     }
@@ -208,6 +198,11 @@ body
 {
     background-color: #f2f2f2;
     padding-left: 15px;
+    a 
+    {
+        text-decoration: none;
+        color: black;
+    }
 
     .restaurants__contener
     {
@@ -306,6 +301,11 @@ footer
     {
         color: #ccc9c9;
     }
+    a 
+    {
+        text-decoration: none;
+        color: #ccc9c9;
+    }
     @include breakpoint(desktop){
         display: flex;
         height: 150px;
@@ -345,21 +345,26 @@ footer
     padding-left: 10px;
     &:hover
     {
+        
         & .menu__contener__ani
         {
             display: flex;
             justify-content: center;
             align-items: center;
             transform: scalex(1);
-            animation: progress-bar 1000 1150ms;
+            animation: progress-bar 1000ms backwards ;
+            animation-timing-function: cubic-bezier(0.11,-0.2, 0.04, 1.01);
             
-
+            
         }
         & i 
         {
             animation: progress-bar4 800ms;
         }
-        
+        & .price 
+        {
+            transform: translateX(0);
+        }
     }
     .menu__contener__ani
     {
@@ -373,8 +378,9 @@ footer
         border-top-right-radius: 15px;
         transform-origin: right;
         transform: scalex(0);
-        transition: transform 1000ms ease-in-out;
+        transition: transform 1000ms;
         display: none;
+        
         i 
         {
             transition: transform 0s ease-in-out;
@@ -410,28 +416,38 @@ footer
         border-top: 3px $tertaire solid;
         margin-top: -5px;
     }
-    .menu__price 
+    .menu__description 
     {
         display: flex;
         justify-content: space-between;
         margin-top: -25px;
-        
+        transition: display 5s;
         
         
     }
     .commande__btn
     {
-        padding: 10px 10px;
+        padding: 12px 10px;
         text-align: center;
-        width: 50%;
+        width: 40%;
         margin: auto;
         background-image: linear-gradient(to top, $primaire, $secondaire);
+        box-shadow: 0px 2px 8px #a3a2a2;
         border-radius: 20px;
         overflow: hidden;
         & a 
         {
             text-decoration: none;
             color: #fff;
+        }
+        &:hover 
+        {
+            background-image: linear-gradient(to top, lighten($color: $primaire, $amount: 5), $secondaire);
+        }
+        .btn__bg
+        {
+         
+         
         }
         
     }
