@@ -1,0 +1,20 @@
+body
+{
+    background-color: white;
+    font-family: Roboto, sans-serif, Shrikhand;
+    margin: 0; 
+    
+    @include breakpoint(desktop){
+        width: 90%;
+        margin: auto;
+    }
+}
+.text--bold
+{
+    font-weight: bold;
+}
+
+.padding__right
+{
+    padding-right: 15px;
+}

@@ -1,0 +1,28 @@
+footer 
+{
+    background-color: rgb(36, 39, 39);
+    padding-top: 10px;
+    padding-left: 15px;
+    h3 
+    {
+        font-family: Shrikhand;
+        color: #ccc9c9;
+        font-weight: normal;
+    }
+    p 
+    {
+        color: #ccc9c9;
+    }
+    a 
+    {
+        text-decoration: none;
+        color: #ccc9c9;
+    }
+    @include breakpoint(desktop){
+        display: flex;
+        height: 150px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}

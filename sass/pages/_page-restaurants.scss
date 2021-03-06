@@ -1,0 +1,197 @@
+.menu1 {
+    background-color: #f2f2f2;
+    padding-left: 15px;
+    margin-top: -50px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    .menu__title
+    {
+    display: flex;
+    justify-content: space-between;
+        i 
+        {
+            font-size: x-large;
+            color: #807e7e;
+            margin-left: -50px;
+        }
+    }
+    .menu__contener{
+    display: flex;
+    align-items: center;
+    width: 92%;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 10px;
+    
+    
+    @include breakpoint(desktop)
+    {
+        min-width: 350px;
+    }
+    
+    &:hover
+    {
+        
+        & .menu__contener__ani
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scalex(1);
+            animation: men-contener-ani 1000ms backwards ;
+            animation-timing-function: cubic-bezier(0.11,-0.2, 0.04, 1.01);
+            
+            
+        }
+        & i 
+        {
+            animation: rotation-icon 800ms;
+            
+        }
+        & .price 
+        {
+            transform: translateX(0);
+        }
+        .menu__contener__visible
+        {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .menu__description
+        {
+            & .hide__text
+            {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    .menu__contener__ani
+    {
+        min-width: 20%;
+        background: #99E2D0;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+        transform-origin: right;
+        transform: scalex(0);
+        transition: transform 1000ms;
+        display: none;
+        
+        i 
+        {
+            transition: transform 0s ease-in-out;
+            transform: rotate(0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-color: white;
+        }
+
+    }
+    
+    }
+    .menu__contener__visible
+    {
+        
+        width: 100%;
+        margin: auto;
+        padding-right: 15px;
+        
+    }
+    h2 
+    {
+        font-family: Shrikhand;
+    }
+    .menu__border
+    {
+        width: 12%;
+        border-top: 3px $tertaire solid;
+        margin-top: -5px;
+    }
+    .menu__description 
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -25px;
+        transition: display 5s;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+    }
+    .commande__btn
+    {
+        padding: 12px 10px;
+        text-align: center;
+        width: 40%;
+        margin: auto;
+        background-image: linear-gradient(to top, $primaire, $secondaire);
+        box-shadow: 0px 2px 8px #a3a2a2;
+        border-radius: 20px;
+    
+        & a 
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+        &:hover 
+        {
+            background-image: linear-gradient(to top, lighten($color: $primaire, $amount: 5), $secondaire);
+        }
+        @include breakpoint(desktop){
+            width: 20%;
+        }
+        
+    }
+    /*animation qui nous permettra d'affiche les uns après les autres les entrées, plats et dessert */
+    .entre__ani
+    {
+        animation: men-contener-ani 1000ms backwards ;
+        animation-timing-function: cubic-bezier(0.11,-0.2, 0.04, 1.01);
+        animation-delay: 400ms;
+    }
+    
+    .plat__ani
+    {
+        animation: men-contener-ani 1000ms backwards ;
+        animation-timing-function: cubic-bezier(0.11,-0.2, 0.04, 1.01);
+        animation-delay: 700ms;
+    }
+    .desserts__ani
+    {
+        animation: men-contener-ani 1000ms backwards ;
+        animation-timing-function: cubic-bezier(0.11,-0.2, 0.04, 1.01);
+        animation-delay: 1100ms;
+    }
+    .menu__all
+    {
+        @include breakpoint(desktop)
+        {
+           display: flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+        }
+    }
+
+}
+.menu__image
+{
+    background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    height: 240px;
+    @include breakpoint(desktop){
+        height: 450px;
+        background-position: center;
+        margin-top: -19px;
+    }
+
+}

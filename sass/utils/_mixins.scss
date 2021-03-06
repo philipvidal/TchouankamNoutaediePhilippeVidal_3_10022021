@@ -1,0 +1,9 @@
+/*breskpoint pour adapter notre site sur tablette et desktop*/
+@mixin breakpoint($point) {
+    @if $point == tablette {
+        @media screen and(min-width: 750px) { @content; }
+    }
+    @else if $point == desktop {
+        @media screen and(min-width: 1000px) { @content }
+    }
+}
