@@ -103,6 +103,9 @@
         width: 100%;
         margin: auto;
         padding-right: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         
     }
     h2 
@@ -124,6 +127,12 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        & .hide__text
+            {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         
     }
     .commande__btn
@@ -181,7 +190,7 @@
     }
 
 }
-.menu__image
+.menu__a-lafrançaise__image
 {
     background-image: url(images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-repeat: no-repeat;
@@ -194,4 +203,19 @@
         margin-top: -19px;
     }
 
+}
+.menu__note-enchante__image
+{
+    @extend .menu__a-lafrançaise__image;
+    background-image: url(images/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.menu__palette-dugout__image
+{
+    @extend .menu__a-lafrançaise__image;
+    background-image: url(images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.men__delice-dessens__image
+{
+    @extend .menu__a-lafrançaise__image;
+    background-image: url(images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
